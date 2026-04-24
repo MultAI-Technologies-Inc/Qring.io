@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | QRing.io</title>
+    
+    <meta name="title" content="QRing.io | Post-Quantum Privacy">
+    <meta name="description" content="The first production-ready, post-quantum hardfork of Monero. Faster, lighter, and engineered for the quantum era.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qring.io/">
+    <meta property="og:title" content="QRing.io | Post-Quantum Privacy">
+    <meta property="og:description" content="The first production-ready, post-quantum hardfork of Monero. Faster, lighter, and engineered for the quantum era.">
+    <meta property="og:image" content="https://qring.io/preview-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qring.io/">
+    <meta property="twitter:title" content="QRing.io | Post-Quantum Privacy">
+    <meta property="twitter:description" content="The first production-ready, post-quantum hardfork of Monero. Faster, lighter, and engineered for the quantum era.">
+    <meta property="twitter:image" content="https://qring.io/preview-image.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans flex flex-col min-h-screen transition-colors duration-300">
+
+    <header class="w-full relative z-50 bg-gray-50 dark:bg-gray-950 transition-colors duration-300 border-b border-gray-200 dark:border-gray-800">
+        <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-blue-600 hacker-text" data-value="QRing.io">QRing.io</a>
+            
+            <div class="space-x-4 lg:space-x-6 hidden md:flex items-center text-sm lg:text-base">
+                <a href="why.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Why QRing?">Why QRing?</a>
+                <a href="faq.html" class="hover:text-blue-600 font-medium hacker-text" data-value="FAQ">FAQ</a>
+                <a href="benchmarks.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Benchmarks">Benchmarks</a>
+                <a href="roadmap.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Roadmap">Roadmap</a>
+                <a href="updates.html" class="hover:text-blue-600 font-medium hacker-text" data-value="DevLog">DevLog</a>
+                <a href="newsletter.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Newsletter">Newsletter</a>
+                <a href="downloads.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Downloads">Downloads</a>
+                <a href="links.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Links">Links</a>
+                <a href="hiring.html" class="hover:text-blue-600 font-medium hacker-text" data-value="Hiring">Hiring</a>
+                <a href="team.html" class="text-blue-600 font-bold hacker-text" data-value="Team">Team</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg text-sm p-2 focus:outline-none transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-900 dark:text-gray-100 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-b border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-lg pb-4 pt-2 px-6">
+            <div class="flex flex-col space-y-4">
+                <a href="why.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Why QRing?</a>
+                <a href="faq.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">FAQ</a>
+                <a href="benchmarks.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Benchmarks</a>
+                <a href="roadmap.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Roadmap</a>
+                <a href="updates.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">DevLog/Updates</a>
+                <a href="newsletter.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Newsletter</a>
+                <a href="downloads.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Downloads</a>
+                <a href="links.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Links</a>
+                <a href="hiring.html" class="text-lg font-medium hover:text-blue-600 dark:text-gray-200">Hiring</a>
+                <a href="team.html" class="text-lg font-bold text-blue-600 dark:text-gray-200">Team</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 px-4">
+        <div class="max-w-6xl mx-auto reveal">
+            
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 hacker-text cursor-default" data-value="Core Team">Core Team</h1>
+                <p class="text-gray-600 dark:text-gray-400 text-lg transition-colors max-w-2xl mx-auto">
+                    The cryptographers, systems engineers, and architects behind MultAI Technologies and the QRing protocol.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 shadow-sm transition-colors hover:shadow-md flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl font-bold">
+                            BF
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white hacker-text" data-value="Bryan J. Fehr">Bryan J. Fehr</h2>
+                            <p class="text-blue-600 dark:text-blue-400 font-medium">Lead Architect / Founder</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                        Driving the core architectural vision and low-level C++ implementation of the QRing protocol and Qubit L2. Specializes in integrating post-quantum lattice cryptography into production-ready decentralized networks.
+                    </p>
+                    <a href="https://github.com/bryanjfehr" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-800 dark:hover:bg-white transition shadow-sm hacker-text" data-value="View GitHub Profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        View GitHub Profile
+                    </a>
+                </article>
+
+                <article class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 shadow-sm transition-colors hover:shadow-md flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center text-purple-600 dark:text-purple-400 text-2xl font-bold">
+                            JE
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white hacker-text" data-value="Jeff Elder (J.E.)">Jeff Elder (J.E.)</h2>
+                            <p class="text-purple-600 dark:text-purple-400 font-medium">Web Dev / CMO</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                        Writing code since the MySpace era, Jeff is a fiercely self-taught web developer and the marketing engine driving QRing. Rapidly mastering over a dozen languages and frameworks, he builds the user-facing infrastructure for MultAI Technologies. As CMO—and the Founder of Trash Oracle Studios—he ensures the world understands the post-quantum math the core team is building.
+                    </p>
+                    <a href="https://github.com/thej4nitorng" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-800 dark:hover:bg-white transition shadow-sm hacker-text" data-value="View GitHub Profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        View GitHub Profile
+                    </a>
+                </article>
+
+                <article class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 shadow-sm transition-colors hover:shadow-md flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 rounded-full flex items-center justify-center text-teal-600 dark:text-teal-400 text-2xl font-bold">
+                            MH
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white hacker-text" data-value="Matt Haydon (M.H.)">Matt Haydon (M.H.)</h2>
+                            <p class="text-teal-600 dark:text-teal-400 font-medium">AI/ML & Cyber Architect</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                        Matt operates across the AI/ML, blockchain, and cybersecurity stack at MultiAI Technologies. His background includes blockchain development at Laserchain, and he now focuses on high-performance multi-agent systems, scalable ML infrastructure, and quantum-safe architecture. He moves between low-level engineering and cross-team technical coordination with an architect's mindset, building systems designed to scale from cloud to edge to physical hardware. His graduate-level Cybersecurity coursework at WGU reinforces his approach to hardened infrastructure, threat modeling, and post-quantum resilience.
+                    </p>
+                    <a href="https://github.com/multidimensionalinteractive" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-800 dark:hover:bg-white transition shadow-sm hacker-text" data-value="View GitHub Profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        View GitHub Profile
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 text-center text-gray-500 dark:text-gray-400 text-sm mt-auto bg-gray-50 dark:bg-gray-950 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
+        <p>&copy; 2026 QRing.io. All rights reserved.</p>
+        <p class="mt-2">Actively maintained by MultAI Technologies Inc.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+    <script>
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach((el) => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+            observer.observe(el);
+        });
+    </script>
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+        const scrambleObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    let iterations = 0;
+                    const originalText = element.dataset.value;
+                    const interval = setInterval(() => {
+                        element.innerText = element.innerText.split("")
+                            .map((letter, index) => {
+                                if(index < iterations) return originalText[index];
+                                return letters[Math.floor(Math.random() * letters.length)];
+                            }).join("");
+                        
+                        if(iterations >= originalText.length) { 
+                            clearInterval(interval);
+                            element.innerText = originalText;
+                        }
+                        iterations += 1 / 3;
+                    }, 30);
+                    observer.unobserve(element);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.hacker-text').forEach(element => { scrambleObserver.observe(element); });
+    </script>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (document.documentElement.classList.contains('dark')) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                localStorage.setItem('color-theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
